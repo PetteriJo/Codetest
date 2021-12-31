@@ -54,6 +54,7 @@ def convert_to_unix(date):
 
 
 def bearish(unix1, database):
+    """Gives longest downward trend for bitcoin"""
     longest_trend = 0
     streak = 0
     last_price = 0
@@ -83,6 +84,7 @@ def bearish(unix1, database):
 
 
 def highest_volume(unix1, database):
+    """Gives the day of highest trading volume"""
     highest = 0
     highest_unix = 0
     start = unix1 * 1000
@@ -100,6 +102,7 @@ def highest_volume(unix1, database):
 
 
 def time_travel(unix1, database):
+    """Gives two dates: date you should buy bitcoins and day you should sell your bitcoins"""
     biggest_difference = 0
     last_price = 0
     start = unix1 * 1000
